@@ -1,0 +1,8 @@
+name: Pit
+version: '${version}'
+main: xyz.kellsthepenguin.pit.Pit
+api-version: 1.17
+
+commands:
+  pit:
+    description: join to pit
