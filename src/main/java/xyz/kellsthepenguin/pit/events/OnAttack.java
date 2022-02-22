@@ -7,8 +7,6 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
-import java.util.Map;
-
 import static xyz.kellsthepenguin.pit.Pit.playingStatuses;
 
 public class OnAttack implements Listener {
@@ -16,10 +14,6 @@ public class OnAttack implements Listener {
     public void onAttack(EntityDamageByEntityEvent e) {
         Entity damagerEntity = e.getDamager();
         Entity damagedEntity = e.getEntity();
-
-        for (Map.Entry<String, Boolean> entrySet : playingStatuses.entrySet()) {
-            System.out.println(entrySet.getKey() + " : " + entrySet.getValue());
-        }
 
         if (!(damagerEntity instanceof Player damager
                 && damagedEntity instanceof Player damaged
