@@ -1,2 +1,3 @@
 world: world
 message: "@t님이 @k님에게 죽었습니다"
+actionbar: "KILLS: @k | DEATHS: @d | COINS: @c"
