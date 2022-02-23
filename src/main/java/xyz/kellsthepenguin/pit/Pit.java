@@ -8,6 +8,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import xyz.kellsthepenguin.pit.commands.KitCreateCommand;
 import xyz.kellsthepenguin.pit.commands.PitCommand;
 import xyz.kellsthepenguin.pit.events.OnAttack;
 import xyz.kellsthepenguin.pit.events.OnDeath;
@@ -22,13 +23,15 @@ public final class Pit extends JavaPlugin {
     public static HashMap<String, Boolean> playingStatuses = new HashMap<>();
     public static FileConfiguration configuration;
     public static Path userDataPath;
+    public static String dataPath;
 
     @Override
     public void onEnable() {
         PluginManager manager = Bukkit.getPluginManager();
         this.saveDefaultConfig();
         configuration = this.getConfig();
-        userDataPath = Paths.get(this.getDataFolder().toPath().toString(), "users");
+        dataPath = this.getDataFolder().toString();
+        userDataPath = Paths.get(dataPath, "users");
         File userDataFolder = userDataPath.toFile();
 
         if (!userDataFolder.exists()) userDataFolder.mkdir();
@@ -39,6 +42,7 @@ public final class Pit extends JavaPlugin {
 
         assert false;
         getCommand("pit").setExecutor(new PitCommand());
+        getCommand("kitcreate").setExecutor(new KitCreateCommand());
 
         this.getServer().getScheduler().scheduleSyncRepeatingTask(this, () -> {
             for (Player p : Bukkit.getWorld(configuration.getString("world")).getPlayers()) {

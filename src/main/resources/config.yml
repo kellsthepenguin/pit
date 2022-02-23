@@ -1,3 +1,58 @@
 world: world
 message: "@t님이 @k님에게 죽었습니다"
 actionbar: "KILLS: @k | DEATHS: @d | COINS: @c"
+
+kits:
+  default:
+    armor:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: IRON_BOOTS
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: IRON_LEGGINGS
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: IRON_CHESTPLATE
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: IRON_HELMET
+    storage:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 2730
+        type: IRON_SWORD
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null
+      - null

@@ -6,3 +6,9 @@ api-version: 1.17
 commands:
   pit:
     description: join to pit
+  kitcreate:
+    description: create kit
+
+permissions:
+  pit.commands.kitcreate:
+    description: create kit
