@@ -2,6 +2,9 @@ world: world
 message: "@t님이 @k님에게 죽었습니다"
 actionbar: "KILLS: @k | DEATHS: @d | COINS: @c"
 
+pit-tp: true
+pit-tp-location: 0 10 0
+
 kits:
   default:
     armor:
