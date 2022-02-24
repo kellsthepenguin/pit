@@ -30,6 +30,7 @@ public class PitCommand implements CommandExecutor {
                     playingStatuses.put(uuid, true);
                 } else {
                     sender.sendMessage(ChatColor.RED + "That kit is not exist!");
+                    return true;
                 }
 
                 playingStatuses.put(uuid, true);
