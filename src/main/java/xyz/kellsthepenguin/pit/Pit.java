@@ -13,6 +13,7 @@ import xyz.kellsthepenguin.pit.commands.PitCommand;
 import xyz.kellsthepenguin.pit.events.OnAttack;
 import xyz.kellsthepenguin.pit.events.OnDeath;
 import xyz.kellsthepenguin.pit.events.OnJoin;
+import xyz.kellsthepenguin.pit.events.OnLeavePit;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -39,6 +40,7 @@ public final class Pit extends JavaPlugin {
         manager.registerEvents(new OnJoin(), this);
         manager.registerEvents(new OnAttack(), this);
         manager.registerEvents(new OnDeath(), this);
+        manager.registerEvents(new OnLeavePit(), this);
 
         assert false;
         getCommand("pit").setExecutor(new PitCommand());
