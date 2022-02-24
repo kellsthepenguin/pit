@@ -7,6 +7,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
+import static xyz.kellsthepenguin.pit.Pit.configuration;
 import static xyz.kellsthepenguin.pit.Pit.playingStatuses;
 
 public class OnAttack implements Listener {
@@ -21,6 +22,7 @@ public class OnAttack implements Listener {
                 && playingStatuses.containsKey(damaged.getUniqueId().toString())
                 && playingStatuses.get(damager.getUniqueId().toString())
                 && playingStatuses.get(damaged.getUniqueId().toString())
+                && damager.getWorld().getName().equals(configuration.getString("world"))
         )) {
             e.setCancelled(true);
         }

@@ -19,7 +19,7 @@ public class OnDeath implements Listener {
         Player target = e.getEntity();
         Player killer = e.getEntity().getKiller();
 
-        if (killer != null) {
+        if (killer != null && target.getWorld().getName().equals(configuration.getString("world"))) {
             String message = configuration.getString("message")
                     .replaceAll("@t", target.getName())
                     .replaceAll("@k", killer.getName());

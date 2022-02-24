@@ -17,7 +17,7 @@ public class PitCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player player) {
-            if (args.length != 0) {
+            if (args.length != 0 && player.getWorld().getName().equals(configuration.getString("world"))) {
                 String uuid = player.getUniqueId().toString();
                 String kit = args[0];
                 ConfigurationSection kitsSection = configuration.getConfigurationSection("kits");
